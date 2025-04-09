@@ -1,0 +1,94 @@
+25% 
+
+Apriori Starts
+1 Itemset total elements 35 time needed 0.5858762264251709
+2 Itemset Candidate 595
+2 Frequent Itemset total elements 241 time needed 3.0413081645965576
+3 Itemset Candidate 883
+3 Frequent Itemset total elements 749 time needed 5.0000200271606445
+4 Itemset Candidate 1378
+4 Frequent Itemset total elements 1323 time needed 8.386144876480103
+5 Itemset Candidate 1456
+5 Frequent Itemset total elements 1433 time needed 9.663652658462524
+6 Itemset Candidate 1010
+6 Frequent Itemset total elements 1005 time needed 6.963016748428345
+7 Itemset Candidate 498
+7 Frequent Itemset total elements 498 time needed 3.466539144515991
+8 Itemset Candidate 192
+8 Frequent Itemset total elements 192 time needed 1.3976542949676514
+9 Itemset Candidate 57
+9 Frequent Itemset total elements 57 time needed 0.4750986099243164
+10 Itemset Candidate 11
+10 Frequent Itemset total elements 11 time needed 0.12302970886230469
+11 Itemset Candidate 1
+11 Frequent Itemset total elements 1 time needed 0.04350399971008301
+12 Itemset Candidate 0
+12 Frequent Itemset total elements 0 time needed 0.03522372245788574
+5545
+Total time needed 39.18148922920227
+
+20%     
+
+Apriori Starts
+1 Itemset total elements 43 time needed 0.7122797966003418
+2 Itemset Candidate 903
+2 Frequent Itemset total elements 376 time needed 4.541120767593384
+3 Itemset Candidate 1764
+3 Frequent Itemset total elements 1472 time needed 9.381985664367676
+4 Itemset Candidate 3648
+4 Frequent Itemset total elements 3559 time needed 20.929178953170776
+5 Itemset Candidate 6294
+5 Frequent Itemset total elements 6267 time needed 39.3332462310791
+6 Itemset Candidate 8806
+6 Frequent Itemset total elements 8802 time needed 61.51170253753662
+7 Itemset Candidate 10151
+7 Frequent Itemset total elements 10151 time needed 80.22026038169861
+8 Itemset Candidate 9488
+8 Frequent Itemset total elements 9488 time needed 82.76417469978333
+9 Itemset Candidate 7010
+9 Frequent Itemset total elements 7010 time needed 65.64059853553772
+10 Itemset Candidate 4004
+10 Frequent Itemset total elements 4004 time needed 38.559736013412476
+11 Itemset Candidate 1729
+11 Frequent Itemset total elements 1729 time needed 16.67079472541809
+12 Itemset Candidate 546
+12 Frequent Itemset total elements 546 time needed 5.365794897079468
+13 Itemset Candidate 119
+13 Frequent Itemset total elements 119 time needed 1.3621749877929688
+14 Itemset Candidate 16
+14 Frequent Itemset total elements 16 time needed 0.255812406539917
+15 Itemset Candidate 1
+15 Frequent Itemset total elements 1 time needed 0.055097103118896484
+16 Itemset Candidate 0
+16 Frequent Itemset total elements 0 time needed 0.03400373458862305
+53583
+Total time needed 427.33850145339966
+
+
+
+
+30 %
+
+
+Apriori Starts
+1 Itemset total elements 28 time needed 0.7132782936096191
+2 Itemset Candidate 378
+2 Frequent Itemset total elements 163 time needed 1.8029584884643555
+3 Itemset Candidate 520
+3 Frequent Itemset total elements 455 time needed 2.7735259532928467
+4 Itemset Candidate 745
+4 Frequent Itemset total elements 725 time needed 4.4637367725372314
+5 Itemset Candidate 732
+5 Frequent Itemset total elements 712 time needed 4.760740041732788
+6 Itemset Candidate 445
+6 Frequent Itemset total elements 441 time needed 2.9716076850891113
+7 Itemset Candidate 169
+7 Frequent Itemset total elements 169 time needed 1.181279182434082
+8 Itemset Candidate 38
+8 Frequent Itemset total elements 38 time needed 0.3007781505584717
+9 Itemset Candidate 4
+9 Frequent Itemset total elements 4 time needed 0.06417512893676758
+10 Itemset Candidate 0
+10 Frequent Itemset total elements 0 time needed 0.03480267524719238
+2735
+Total time needed 19.067296981811523
