@@ -1,3 +1,5 @@
+# works for both int and str item names. int is used. if str needed just change it in the readDataset function
+
 import time
 import math
 def readDataset(filename):
@@ -174,6 +176,7 @@ def apriori(filename,min_support):
     # print(L)
     
     
+# min_support has to be in percentage
     
     
 overallTimeStart = time.time()
