@@ -1,0 +1,57 @@
+Mushroom
+
+20%
+Total 53583
+Total time needed 55.151700258255005
+Memory used: 18.21484375 MB
+
+25%
+Total 5545
+Total time needed 10.006048202514648
+Memory used: 8.5 MB
+
+
+30%
+Total 2735
+Total time needed 6.785750389099121
+Memory used: 6.625 MB
+
+
+
+
+Retail
+
+20%
+Frequent Itemsets Found:
+  ['39'] : 50675
+  ['48'] : 42135
+  ['39', '48'] : 29142
+Total 3
+Total time needed 1.9342930316925049
+Memory used: 3.34765625 MB
+
+
+
+25%
+Frequent Itemsets Found:
+  ['39'] : 50675
+  ['48'] : 42135
+  ['39', '48'] : 29142
+Total 3
+Total time needed 1.9342930316925049
+Memory used: 3.34765625 MB
+
+
+30%
+Frequent Itemsets Found:
+  ['39'] : 50675
+  ['48'] : 42135
+  ['39', '48'] : 29142
+Total 3
+Total time needed 1.9342930316925049
+Memory used: 3.34765625 MB
+
+
+Accidents
+
+20%
