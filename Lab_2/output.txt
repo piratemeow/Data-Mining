@@ -1,0 +1,14 @@
+Filename?
+Filename?
+Minimum Support Percentage?
+Running FP-Growth with min_support = 1764
+Total Itemset 55
+Total time needed: 0.3456554412841797 sec
+Total memory needed: 6.69 MB
+Filename?
+Minimum Support Percentage?
+Running FP-Growth with min_support = 1764
+Total Itemset 55
+Total time needed: 0.34449315071105957 sec
+Total memory needed: 5.75 MB
+Filename?

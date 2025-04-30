@@ -2,9 +2,13 @@
 
 import time
 import math
+import os
+import psutil
+
+process = psutil.Process(os.getpid())
 def readDataset(filename):
     with open(filename, 'r') as file:
-        dataset = [sorted(map(int, line.strip().split())) for line in file if line.strip()] 
+        dataset = [sorted(map(str, line.strip().split())) for line in file if line.strip()] 
     dataset.sort()
     
     # print(dataset)
@@ -64,7 +68,6 @@ def prune(C,L_pre):
 def finalL(filename, C,min_support):
     dataset = readDataset(filename=filename)
     min_support = math.ceil(len(dataset)*min_support)
-    # print(f"Min suopp {min_support}")
     support_count = []
     frequent_k_itemset = []
     frequent_k_itemset_with_support_count = {}
@@ -88,6 +91,7 @@ def finalL(filename, C,min_support):
 def oneItemset(filename,min_support):
     dataset = readDataset(filename)
     min_support = math.ceil(len(dataset)*min_support)
+    print(f'Running Apriori with min_support = {min_support}')
     def unique_elements(lst_of_lists):
         unique_set = set()
         for sublist in lst_of_lists:
@@ -150,9 +154,9 @@ def apriori(filename,min_support):
         L,support_count = finalL(filename,pruned_C,min_support)
         timeend = time.time()
     
-        totalTime = timeend - timestart
+        # totalTime = timeend - timestart
         print(f"{i} Itemset Candidate {len(pruned_C)}")
-        print(f"{i} Frequent Itemset total elements {len(L)} time needed {totalTime}")
+        # print(f"{i} Frequent Itemset total elements {len(L)} time needed {totalTime}")
         sum+=len(L)
         
         # for ind,ele in enumerate(L):
@@ -160,7 +164,7 @@ def apriori(filename,min_support):
             
         i+=1
         
-    print(sum)
+    print(f"Total Itemset {sum}")
     
     # print()
     # print()
@@ -177,15 +181,21 @@ def apriori(filename,min_support):
     
     
 # min_support has to be in percentage
-    
+
+filename = input("Filename?\n")
+min_support_per = float(input ("Min support percentage?\n"))
+min_support_per/=100
     
 overallTimeStart = time.time()
-apriori("mushroom",0.30)
+mem_before = process.memory_info().rss
+apriori(filename,min_support_per)
+mem_after = process.memory_info().rss
 overallTimeEnd = time.time()
 
 
 
-print(f"Total time needed {overallTimeEnd - overallTimeStart}")
+print(f"Total time needed {overallTimeEnd - overallTimeStart} sec")
+print(f"Total memory needed: {(mem_after - mem_before) / 1024 ** 2:.2f} MB")
 
 # print(readDataset("data3"))    
 

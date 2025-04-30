@@ -1,5 +1,10 @@
 from collections import defaultdict, namedtuple
 import math
+import psutil
+import os
+import time
+
+process = psutil.Process(os.getpid())
 # --- Data Structures ---
 
 class FPNode:
@@ -292,38 +297,35 @@ def fp_growth(transactions, min_support):
     return frequent_itemsets
 
 
-# --- Example Usage ---
 
-if __name__ == "__main__":
-    # Example dataset from the original paper
-    transactions_data = [
-        ['R', 'Z', 'H', 'J', 'P'],
-        ['Z', 'Y', 'X', 'W', 'V', 'U', 'T', 'S'],
-        ['Z'],
-        ['R', 'X', 'N', 'O', 'S'],
-        ['Y', 'R', 'X', 'Z', 'Q', 'T', 'P'],
-        ['Y', 'Z', 'X', 'E', 'Q', 'S', 'T', 'M'],
-    ]
 
-    filename = input()
-    with open(filename, 'r') as file:
-        dataset = [sorted(map(str, line.strip().split())) for line in file if line.strip()] 
-    transactions_data = dataset
-    # print(transactions_data)
-    min_support_count = math.ceil(0.30*len(dataset))
+filename = input("Filename?\n")
+min_support_perc = float(input("Minimum Support Percentage?\n"))
+min_support_perc/=100
 
-    print(f"Running FP-Growth with min_support = {min_support_count}")
-    print("Dataset 1 (Original Paper):")
-    frequent_patterns = fp_growth(transactions_data, min_support_count)
-    print("Frequent Itemsets Found:")
-    # Sort by support for better readability
-    sorted_patterns = sorted(frequent_patterns.items(), key=lambda item: item[1], reverse=True)
-    
-    total = 0
-    for itemset, support in sorted_patterns:
-        total+=1
-        print(f"  {list(itemset)} : {support}")
+with open(filename, 'r') as file:
+    dataset = [sorted(map(str, line.strip().split())) for line in file if line.strip()] 
+transactions_data = dataset
+# print(transactions_data)
+min_support_count = math.ceil(min_support_perc*len(dataset))
 
-    print(f'Total {total}')
+print(f"Running FP-Growth with min_support = {min_support_count}")
+startTime = time.time()
+mem_before = process.memory_info().rss
+frequent_patterns = fp_growth(transactions_data, min_support_count)
+mem_after = process.memory_info().rss
+endTime = time.time()
+# print("Frequent Itemsets Found:")
+# Sort by support for better readability
+sorted_patterns = sorted(frequent_patterns.items(), key=lambda item: item[1], reverse=True)
 
-    
+total = 0
+for itemset, support in sorted_patterns:
+    total+=1
+    # print(f"  {list(itemset)} : {support}")
+
+print(f'Total Itemset {total}')
+
+print(f'Total time needed: {endTime - startTime} sec')
+print(f"Total memory needed: {(mem_after - mem_before) / 1024 ** 2:.2f} MB")
+
